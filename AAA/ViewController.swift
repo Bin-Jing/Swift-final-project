@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(fontSize))
+        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(ViewController.fontSize))
     }
     
     
     
     
     
-    var fontSize:Double = 17.0
+    static var fontSize:Double = 17.0
     @IBOutlet weak var textContent: UITextView!
     
     @IBOutlet weak var hideEditBtnOutlet: UIButton!
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         //self.navigationItem.title = textUITableViewController.selectTitle
         //self.textContent.text = textUITableViewController.selectText
         self.textContent.text = dataObject
-        textContent.font = UIFont(name: "Charter",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Charter",size: CGFloat(ViewController.fontSize))
         fontAthelasOutlet.titleLabel?.font = UIFont(name: "Athelas",size: 17)
         fontCharterOutlet.titleLabel?.font = UIFont(name: "Charter", size: 17)
         fontSeravekOutlet.titleLabel?.font = UIFont(name: "Seravek", size: 17)
@@ -76,25 +76,25 @@ class ViewController: UIViewController {
     
     
     @IBAction func fontCharter(_ sender: Any) {
-        textContent.font = UIFont(name: "Charter",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Charter",size: CGFloat(ViewController.fontSize))
     }
     
     @IBAction func fontAthelas(_ sender: Any) {
-        textContent.font = UIFont(name: "Athelas",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Athelas",size: CGFloat(ViewController.fontSize))
     }
     
     @IBAction func fontGeorgia(_ sender: Any) {
-        textContent.font = UIFont(name: "Georgia",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Georgia",size: CGFloat(ViewController.fontSize))
     }
     
     @IBAction func fontPalatino(_ sender: Any) {
-        textContent.font = UIFont(name: "Palatino",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Palatino",size: CGFloat(ViewController.fontSize))
     }
     @IBAction func fontSeravek(_ sender: Any) {
-        textContent.font = UIFont(name: "Seravek",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Seravek",size: CGFloat(ViewController.fontSize))
     }
     @IBAction func fontTimesRoman(_ sender: Any) {
-        textContent.font = UIFont(name: "Times New Roman",size: CGFloat(fontSize))
+        textContent.font = UIFont(name: "Times New Roman",size: CGFloat(ViewController.fontSize))
     }
     //編輯按鈕
     @IBAction func editBtn(_ sender: Any){
@@ -117,23 +117,23 @@ class ViewController: UIViewController {
     
     //字體大小
     @IBAction func biggerFontSize(_ sender: Any) {
-        if(fontSize >= 27){
-            fontSize = 27
+        if(ViewController.fontSize >= 27){
+            ViewController.fontSize = 27
         }else{
-            fontSize += 5
+            ViewController.fontSize += 5
         }
-        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(fontSize))
+        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(ViewController.fontSize))
     }
     
     
     
     @IBAction func smallerFontSize(_ sender: Any) {
-        if(fontSize <= 17){
-            fontSize = 17
+        if(ViewController.fontSize <= 17){
+            ViewController.fontSize = 17
         }else{
-            fontSize -= 5
+            ViewController.fontSize -= 5
         }
-        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(fontSize))
+        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(ViewController.fontSize))
     }
     
     //顏色處例

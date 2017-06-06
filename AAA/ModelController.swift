@@ -58,6 +58,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
         var index = self.indexOfViewController(viewController as! ViewController)
         if index == NSNotFound {
             return nil
