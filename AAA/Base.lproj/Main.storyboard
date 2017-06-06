@@ -7,14 +7,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AAA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="AAA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" verticalCompressionResistancePriority="749" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-SO-BdM">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" verticalCompressionResistancePriority="749" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-SO-BdM">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -154,7 +153,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="578-in-CrG">
-                                <rect key="frame" x="177" y="64" width="198" height="262"/>
+                                <rect key="frame" x="0.0" y="361" width="198" height="262"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1df-cB-zFv">
                                         <rect key="frame" x="92" y="172" width="65" height="30"/>
@@ -195,14 +194,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0P-5F-V4r">
                                                 <rect key="frame" x="42" y="0.0" width="70" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Big"/>
+                                                <state key="normal" title="＋"/>
                                                 <connections>
                                                     <action selector="biggerFontSize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVl-3W-12C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7n-uL-GFf">
                                                 <rect key="frame" x="112" y="0.0" width="70" height="36"/>
-                                                <state key="normal" title="Small"/>
+                                                <state key="normal" title="—"/>
                                                 <connections>
                                                     <action selector="smallerFontSize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M63-Yf-r47"/>
                                                 </connections>
@@ -284,42 +283,53 @@
                                     <constraint firstItem="VYD-2b-A62" firstAttribute="leading" secondItem="578-in-CrG" secondAttribute="leading" constant="8" id="1w7-ZB-Xin"/>
                                     <constraint firstItem="VYD-2b-A62" firstAttribute="height" secondItem="hwP-kc-6Dx" secondAttribute="height" id="2Oj-Yi-mu5"/>
                                     <constraint firstAttribute="trailing" secondItem="VYD-2b-A62" secondAttribute="trailing" constant="8" id="2lY-yM-ri0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="262" id="SQe-uh-B0z"/>
                                     <constraint firstItem="hwP-kc-6Dx" firstAttribute="leading" secondItem="578-in-CrG" secondAttribute="leading" constant="8" id="UOk-DJ-tiy"/>
                                     <constraint firstAttribute="width" constant="198" id="W7P-QE-eeq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="198" id="dTV-ya-Wds"/>
                                     <constraint firstItem="hwP-kc-6Dx" firstAttribute="top" secondItem="578-in-CrG" secondAttribute="top" constant="8" id="eGF-XG-Wu7"/>
                                     <constraint firstAttribute="height" constant="262" id="sGq-PW-KTk"/>
                                     <constraint firstAttribute="trailing" secondItem="hwP-kc-6Dx" secondAttribute="trailing" constant="8" id="y7h-eP-Y3A"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdR-A8-sjO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="yId-WW-JfL">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eLp-cT-bJV">
+                                            <rect key="frame" x="16" y="1.5" width="68" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="font"/>
+                                            <connections>
+                                                <action selector="editBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nR-W5-9Sw"/>
+                                            </connections>
+                                        </button>
+                                        <connections>
+                                            <action selector="editBtn" destination="BYZ-38-t0r" id="wm8-Lx-W76"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FGt-SO-BdM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="25O-kE-x8d"/>
-                            <constraint firstItem="578-in-CrG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5I5-SY-jaR"/>
-                            <constraint firstItem="FGt-SO-BdM" firstAttribute="trailing" secondItem="578-in-CrG" secondAttribute="trailing" id="G6C-X5-thb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wdR-A8-sjO" secondAttribute="bottom" id="Ahj-8h-mIM"/>
+                            <constraint firstItem="FGt-SO-BdM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M6Q-FA-wVB"/>
+                            <constraint firstItem="wdR-A8-sjO" firstAttribute="top" secondItem="578-in-CrG" secondAttribute="bottom" id="OAG-ET-Jpw"/>
                             <constraint firstItem="xrY-WA-Ah5" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Rb9-X3-VXM"/>
-                            <constraint firstItem="xrY-WA-Ah5" firstAttribute="trailing" secondItem="578-in-CrG" secondAttribute="trailing" id="ahc-Ie-pu1"/>
-                            <constraint firstAttribute="trailing" secondItem="578-in-CrG" secondAttribute="trailing" id="aw0-Nw-ofL"/>
-                            <constraint firstItem="FGt-SO-BdM" firstAttribute="top" secondItem="578-in-CrG" secondAttribute="top" id="gIz-ND-JZk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FGt-SO-BdM" secondAttribute="bottom" id="TlX-FZ-my4"/>
+                            <constraint firstAttribute="trailing" secondItem="wdR-A8-sjO" secondAttribute="trailing" id="VCD-Fk-GJc"/>
+                            <constraint firstItem="578-in-CrG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VOQ-Ss-rxs"/>
+                            <constraint firstItem="wdR-A8-sjO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vli-oR-gLg"/>
+                            <constraint firstItem="xrY-WA-Ah5" firstAttribute="trailing" secondItem="578-in-CrG" secondAttribute="trailing" constant="177" id="ahc-Ie-pu1"/>
+                            <constraint firstItem="wdR-A8-sjO" firstAttribute="top" secondItem="578-in-CrG" secondAttribute="bottom" id="cnj-AJ-6Io"/>
                             <constraint firstItem="xrY-WA-Ah5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gh4-LN-YAz"/>
                             <constraint firstItem="xrY-WA-Ah5" firstAttribute="leading" secondItem="FGt-SO-BdM" secondAttribute="leading" id="kYv-Wj-fsg"/>
-                            <constraint firstItem="FGt-SO-BdM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q1e-vC-hKo"/>
+                            <constraint firstItem="FGt-SO-BdM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="pJH-D2-226"/>
+                            <constraint firstAttribute="trailing" secondItem="FGt-SO-BdM" secondAttribute="trailing" id="vgw-3J-3aI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="0gJ-2F-20u">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="edit" id="m9L-ek-unG">
-                                <connections>
-                                    <action selector="editBtn:" destination="BYZ-38-t0r" id="qky-97-hPV"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="play" id="0fB-l1-Y4a">
-                                <connections>
-                                    <action selector="play:" destination="BYZ-38-t0r" id="cNV-BW-v0J"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="0gJ-2F-20u"/>
                     <connections>
                         <outlet property="editVeiw" destination="578-in-CrG" id="Diz-eC-e1T"/>
                         <outlet property="fontAthelasOutlet" destination="b4d-8R-zfV" id="QOU-F7-3Cj"/>
@@ -331,7 +341,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984.8" y="111.99400299850076"/>
+            <point key="canvasLocation" x="1940" y="954.87256371814101"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="pPo-jR-BKE">
+            <objects>
+                <viewController id="8kb-0L-x2W" customClass="RootViewController" customModule="AAA" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3K-DB-21R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="955"/>
         </scene>
         <!--TextUI Table View Controller-->
         <scene sceneID="Fc0-fP-1Fl">
@@ -359,7 +377,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Ujz-ch-H3N"/>
+                                    <segue destination="8kb-0L-x2W" kind="show" id="mct-od-Qnd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -393,4 +411,7 @@
             <point key="canvasLocation" x="181.59999999999999" y="111.99400299850076"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="font" width="59" height="41"/>
+    </resources>
 </document>

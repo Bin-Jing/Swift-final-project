@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04230DE81EE53F68000FB024 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230DE71EE53F68000FB024 /* RootViewController.swift */; };
+		04230DEC1EE53FA3000FB024 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230DEB1EE53FA3000FB024 /* ModelController.swift */; };
 		0458DC181ED022D300F963ED /* textUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458DC171ED022D300F963ED /* textUITableViewController.swift */; };
 		0458DC201ED13D3000F963ED /* text.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0458DC1F1ED13D3000F963ED /* text.plist */; };
 		04E67A901ECF4A6000EE6907 /* txtContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E67A8F1ECF4A6000EE6907 /* txtContent.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04230DE71EE53F68000FB024 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		04230DEB1EE53FA3000FB024 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		0458DC171ED022D300F963ED /* textUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textUITableViewController.swift; sourceTree = "<group>"; };
 		0458DC1F1ED13D3000F963ED /* text.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = text.plist; sourceTree = "<group>"; };
 		04E67A8F1ECF4A6000EE6907 /* txtContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = txtContent.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				04E67A8F1ECF4A6000EE6907 /* txtContent.swift */,
 				0458DC171ED022D300F963ED /* textUITableViewController.swift */,
 				0458DC1F1ED13D3000F963ED /* text.plist */,
+				04230DE71EE53F68000FB024 /* RootViewController.swift */,
+				04230DEB1EE53FA3000FB024 /* ModelController.swift */,
 			);
 			path = AAA;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 			files = (
 				0458DC181ED022D300F963ED /* textUITableViewController.swift in Sources */,
 				FEF866F81ECC12FC00358E16 /* ViewController.swift in Sources */,
+				04230DE81EE53F68000FB024 /* RootViewController.swift in Sources */,
+				04230DEC1EE53FA3000FB024 /* ModelController.swift in Sources */,
 				04E67A901ECF4A6000EE6907 /* txtContent.swift in Sources */,
 				FEF866F61ECC12FC00358E16 /* AppDelegate.swift in Sources */,
 			);

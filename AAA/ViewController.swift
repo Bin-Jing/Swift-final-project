@@ -10,34 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func play(_ sender: Any) {
-        //var width:CGFloat = textContent.frame.size.width;
-        //var page :NSInteger = (textContent.contentOffset.x + (0.5 * width))/width;
-        //self.scrollToPage(page: 2, animated: true)
-    }
-    
-    
-    
-    
-//    func scrollToPage(page: Int, animated: Bool) {
-//        //CGRect frame = textcon.frame;
-//        //textContent.frame
-//        /*var frame: CGRect = self.textContent.frame
-//        frame.origin.x = frame.size.width * CGFloat(page);
-//        frame.origin.y = 0;
-//        self.textContent.scrollRectToVisible(frame, animated: animated)
-//       */
-//        var frame :CGRect = textContent.frame;
-//        frame.origin.x = frame.size.width * 2;
-//        frame.origin.y = 0;
-//        [scrollRectToVisible:frame animated:YES];
-//
-//    }
     
     //未作功能 當退出頁面時儲存目前讀到幾頁用
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    
+    
+    
+    
+    var dataObject: String = ""
+    var textObject: String = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(fontSize))
+    }
+    
     
     
     
@@ -48,8 +37,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var hideEditBtnOutlet: UIButton!
     @IBOutlet weak var editVeiw: UIView!
     func updateUIElements() {
-        self.navigationItem.title = textUITableViewController.selectTitle
-        self.textContent.text = textUITableViewController.selectText
+        //self.navigationItem.title = textUITableViewController.selectTitle
+        //self.textContent.text = textUITableViewController.selectText
+        self.textContent.text = dataObject
         textContent.font = UIFont(name: "Charter",size: CGFloat(fontSize))
         fontAthelasOutlet.titleLabel?.font = UIFont(name: "Athelas",size: 17)
         fontCharterOutlet.titleLabel?.font = UIFont(name: "Charter", size: 17)
@@ -106,10 +96,8 @@ class ViewController: UIViewController {
     @IBAction func fontTimesRoman(_ sender: Any) {
         textContent.font = UIFont(name: "Times New Roman",size: CGFloat(fontSize))
     }
-    
     //編輯按鈕
-    @IBAction func editBtn(_ sender: Any) {
-
+    @IBAction func editBtn(_ sender: Any){
         if(editVeiw.isHidden){
             editVeiw.isHidden = false
             hideEditBtnOutlet.isHidden = false
@@ -118,6 +106,7 @@ class ViewController: UIViewController {
             hideEditBtnOutlet.isHidden = true
         }
     }
+    
     //背景色
     @IBAction func BackgroundWhite(_ sender: Any) {
         textContent.backgroundColor = colorCahnge(rgbValue: 0xFFFFFF)
@@ -128,8 +117,8 @@ class ViewController: UIViewController {
     
     //字體大小
     @IBAction func biggerFontSize(_ sender: Any) {
-        if(fontSize >= 37){
-            fontSize = 37
+        if(fontSize >= 27){
+            fontSize = 27
         }else{
             fontSize += 5
         }
@@ -139,8 +128,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func smallerFontSize(_ sender: Any) {
-        if(fontSize <= 12){
-            fontSize = 12
+        if(fontSize <= 17){
+            fontSize = 17
         }else{
             fontSize -= 5
         }
