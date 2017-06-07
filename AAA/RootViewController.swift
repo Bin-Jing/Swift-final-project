@@ -11,11 +11,13 @@ import UIKit
 class RootViewController: UIViewController, UIPageViewControllerDelegate {
     
     var pageViewController: UIPageViewController?
+    static var books:[String] = ["狼與辛香料第一集片段"]
     
+    @IBOutlet weak var booktitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        booktitle.title = textUITableViewController.selectText
         // Do any additional setup after loading the view, typically from a nib.
         // Configure the page view controller and add it as a child view controller.
         self.pageViewController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
@@ -40,13 +42,15 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.didMove(toParentViewController: self)
     }
     
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     var modelController: ModelController {
-        
         // Return the model controller object, creating it if necessary.
         // In more complex implementations, the model controller may be passed to the view controller.
         if _modelController == nil {
@@ -60,7 +64,6 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
     // MARK: - UIPageViewController delegate methods
     
     func pageViewController(_ pageViewController: UIPageViewController, spineLocationFor orientation: UIInterfaceOrientation) -> UIPageViewControllerSpineLocation {
-        
         if (orientation == .portrait) || (orientation == .portraitUpsideDown) || (UIDevice.current.userInterfaceIdiom == .phone) {
             // In portrait orientation or on iPhone: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to true, so set it to false here.
             let currentViewController = self.pageViewController!.viewControllers![0]
@@ -90,5 +93,3 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
     
     
 }
-
-

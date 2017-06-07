@@ -343,10 +343,24 @@
             </objects>
             <point key="canvasLocation" x="1940" y="954.87256371814101"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Title-->
         <scene sceneID="pPo-jR-BKE">
             <objects>
-                <viewController id="8kb-0L-x2W" customClass="RootViewController" customModule="AAA" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="RootViewController" id="8kb-0L-x2W" customClass="RootViewController" customModule="AAA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeI-Eg-bew"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdx-uq-n0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fdX-D8-vwt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="AIo-t7-wlT"/>
+                    <connections>
+                        <outlet property="booktitle" destination="AIo-t7-wlT" id="lHp-mu-VCt"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3K-DB-21R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1121" y="955"/>

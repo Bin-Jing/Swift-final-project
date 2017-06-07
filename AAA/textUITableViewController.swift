@@ -9,9 +9,8 @@
 import UIKit
 
 class textUITableViewController: UITableViewController {
-    static var selectTitle:String = ""
     static var selectText:String = ""
-    var noteTitles = ["item 0","item 1"]
+    var noteTitles = RootViewController.books
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,9 +37,7 @@ class textUITableViewController: UITableViewController {
     //使用者選擇的table欄位時紀錄選的是哪一欄
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let selectedTitle = self.noteTitles[indexPath.row]
-        let selectFile = txtContent.getTextData()
-        textUITableViewController.selectTitle = selectedTitle as String
+        let selectFile = noteTitles
         textUITableViewController.selectText = selectFile[indexPath.row]
         
     }
