@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     
     static var fontSize:Double = 22.0
-    @IBOutlet weak var textContent: UITextView!
+    @IBOutlet weak var textContent: UILabel!
     
     @IBOutlet weak var hideEditBtnOutlet: UIButton!
     @IBOutlet weak var editVeiw: UIView!
