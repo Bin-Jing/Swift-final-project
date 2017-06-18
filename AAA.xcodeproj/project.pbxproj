@@ -11,6 +11,8 @@
 		04230DEC1EE53FA3000FB024 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230DEB1EE53FA3000FB024 /* ModelController.swift */; };
 		0458DC181ED022D300F963ED /* textUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458DC171ED022D300F963ED /* textUITableViewController.swift */; };
 		04D0D76B1EE7C52700C78EA6 /* 狼與辛香料第一集片段.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D76A1EE7C52700C78EA6 /* 狼與辛香料第一集片段.txt */; };
+		24CA5CC11EEE813100F749DC /* PureTextNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5CC01EEE813100F749DC /* PureTextNote.swift */; };
+		24CA5CC31EEE8E2300F749DC /* template.txt in Resources */ = {isa = PBXBuildFile; fileRef = 24CA5CC21EEE8E2300F749DC /* template.txt */; };
 		FEF866F61ECC12FC00358E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF866F51ECC12FC00358E16 /* AppDelegate.swift */; };
 		FEF866F81ECC12FC00358E16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF866F71ECC12FC00358E16 /* ViewController.swift */; };
 		FEF866FB1ECC12FC00358E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF866F91ECC12FC00358E16 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		04230DEB1EE53FA3000FB024 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		0458DC171ED022D300F963ED /* textUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textUITableViewController.swift; sourceTree = "<group>"; };
 		04D0D76A1EE7C52700C78EA6 /* 狼與辛香料第一集片段.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "狼與辛香料第一集片段.txt"; sourceTree = "<group>"; };
+		24CA5CC01EEE813100F749DC /* PureTextNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureTextNote.swift; sourceTree = "<group>"; };
+		24CA5CC21EEE8E2300F749DC /* template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.txt; sourceTree = "<group>"; };
 		FEF866F21ECC12FC00358E16 /* AAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF866F51ECC12FC00358E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF866F71ECC12FC00358E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		FEF866F41ECC12FC00358E16 /* AAA */ = {
 			isa = PBXGroup;
 			children = (
+				24CA5CC21EEE8E2300F749DC /* template.txt */,
 				FEF866F51ECC12FC00358E16 /* AppDelegate.swift */,
 				FEF866F71ECC12FC00358E16 /* ViewController.swift */,
 				FEF866F91ECC12FC00358E16 /* Main.storyboard */,
@@ -113,6 +118,7 @@
 				FEF867011ECC12FC00358E16 /* Info.plist */,
 				0458DC171ED022D300F963ED /* textUITableViewController.swift */,
 				04230DE71EE53F68000FB024 /* RootViewController.swift */,
+				24CA5CC01EEE813100F749DC /* PureTextNote.swift */,
 				04230DEB1EE53FA3000FB024 /* ModelController.swift */,
 				04D0D76A1EE7C52700C78EA6 /* 狼與辛香料第一集片段.txt */,
 			);
@@ -246,6 +252,7 @@
 			files = (
 				FEF867001ECC12FC00358E16 /* LaunchScreen.storyboard in Resources */,
 				FEF866FD1ECC12FC00358E16 /* Assets.xcassets in Resources */,
+				24CA5CC31EEE8E2300F749DC /* template.txt in Resources */,
 				FEF866FB1ECC12FC00358E16 /* Main.storyboard in Resources */,
 				04D0D76B1EE7C52700C78EA6 /* 狼與辛香料第一集片段.txt in Resources */,
 			);
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CA5CC11EEE813100F749DC /* PureTextNote.swift in Sources */,
 				0458DC181ED022D300F963ED /* textUITableViewController.swift in Sources */,
 				FEF866F81ECC12FC00358E16 /* ViewController.swift in Sources */,
 				04230DE81EE53F68000FB024 /* RootViewController.swift in Sources */,

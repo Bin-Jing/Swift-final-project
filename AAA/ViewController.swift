@@ -8,9 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITextFieldDelegate{
     static var wordOneLine:Int = 17
     static var stringPageLine = 19
+    
+    static var isBig:Bool = true;
+    //
+    static var bigWordOneLine:Int = 17
+    static var bigStringPageLine:Int = 19
+    static var smallWordOneLine:Int = 22
+    static var smallStringPageLine:Int = 25
+    //
+    
+    
     static var backcolor:UIColor = colorCahnge(rgbValue: 0xFFFFFF)
     static var fontType:String = "Charter"
     
@@ -24,13 +34,11 @@ class ViewController: UIViewController {
     
     var dataObject: String = ""
     var textObject: String = ""
+    static var changeSizeText: String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    
-    
     
     
     static var fontSize:Double = 22.0
@@ -69,6 +77,16 @@ class ViewController: UIViewController {
     }
     //字型
     @IBOutlet weak var fontAthelasOutlet: UIButton!
+    @IBAction func editButton(_ sender: Any) {
+        if(editVeiw.isHidden){
+            editVeiw.isHidden = false
+            hideEditBtnOutlet.isHidden = false
+        }else{
+            editVeiw.isHidden = true
+            hideEditBtnOutlet.isHidden = true
+        }
+        
+    }
     
     @IBOutlet weak var fontCharterOutlet: UIButton!
     
@@ -103,16 +121,7 @@ class ViewController: UIViewController {
         ViewController.fontType = "Times New Roman"
         self.updateUIElements()
     }
-    //編輯按鈕
-    @IBAction func editBtn(_ sender: Any){
-        if(editVeiw.isHidden){
-            editVeiw.isHidden = false
-            hideEditBtnOutlet.isHidden = false
-        }else{
-            editVeiw.isHidden = true
-            hideEditBtnOutlet.isHidden = true
-        }
-    }
+
     
     //背景色
     @IBAction func BackgroundWhite(_ sender: Any) {
@@ -135,6 +144,13 @@ class ViewController: UIViewController {
             ViewController.fontSize += 5
         }
         textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(ViewController.fontSize))
+        //ModelController
+        if( ViewController.isBig == false ){
+            ViewController.isBig = true
+            ModelController().doSomething();
+            self.textContent.text = ViewController.changeSizeText
+        }
+        //ViewController.isBig = true
     }
     
     
@@ -148,6 +164,17 @@ class ViewController: UIViewController {
             ViewController.fontSize -= 5
         }
         textContent.font = UIFont(name: (textContent.font?.fontName)!,size: CGFloat(ViewController.fontSize))
+        
+        //let Mod = ModelController();
+        //Mod.doSomething()
+        if( ViewController.isBig ){
+            ViewController.isBig = false
+            ModelController().doSomething();
+            self.textContent.text = ViewController.changeSizeText;
+            
+        }
+        //Mod.type(of: init;)()
+        
     }
     
     //顏色處例
